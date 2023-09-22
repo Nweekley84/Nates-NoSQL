@@ -1,55 +1,47 @@
-// Importing the required dependencies from the mongoose library
-const { Schema, model, Types } = require('mongoose'); 
-// Defining the User schema with the required fields and their respective data types
+// Importing necessary modules from Mongoose
+const { Schema, model } = require("mongoose");
+
+// Defining the schema for the 'user' model
 const userSchema = new Schema(
   {
     username: {
-        type: String,
-        required: true,
-        unique: true,
-        trim: true,
+      type: String,              // Data type for the username
+      unique: true,              // Username must be unique
+      required: true,            // Username is required
+      trim: true,                // Remove extra whitespaces from the username
     },
-      // using regular expression to validate email format
     email: {
-        type: String,
-        required: true,
-        unique: true,
-        validate: { 
-          validator: function(v) {
-              return /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/.test(v);
-          }
-      }
+      type: String,              // Data type for the email address
+      unique: true,              // Email must be unique
+      required: true,            // Email is required
+      match: [                   // Pattern match for a valid email address
+        /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+        "Please enter a valid email address!",
+      ],
     },
-
-    friends:[
-      {
-        type: Schema.Types.ObjectId,
-        ref: 'User',
-    }
-  ],
-    thoughts:[
-      {
-        type: Schema.Types.ObjectId,
-        ref: 'Thought',
-    }
-  ],
+    thoughts: [{                 // Array of _id values referencing the Thought model
+      type: Schema.Types.ObjectId,
+      ref: "thought",
+    }],
+    friends: [{                  // Array of _id values referencing the User model (self-reference for friends)
+      type: Schema.Types.ObjectId,
+      ref: "user",
+    }],
   },
   {
     toJSON: {
-      virtuals: true, // enables virtual properties to be displayed when a user document is transformed into JSON format
+      virtuals: true,           // Include virtual properties when converting to JSON
     },
-    id: false, // disables the default '_id' field in the User model to be returned when calling toJSON() method
-}
+  }
 );
 
-// Defining a virtual property 'friendCount' which returns the number of friends in the friends array
-userSchema.virtual('friendCount').get(function(){
-    return this.friends.length;
+// Creating a virtual property 'friendCount' that returns the number of friends associated with the user
+userSchema.virtual("friendCount").get(function () {
+  return this.friends.length;
 });
-// Creating the User model from the userSchema
-const User = model('User',userSchema)
-// Exporting the User model as a module
-module.exports = User
 
+// Initializing the User model based on the defined schema
+const User = model("user", userSchema);
 
-
+// Exporting the User model for use in other files
+module.exports = User;
