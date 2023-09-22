@@ -16,7 +16,3 @@ db.once('open', () => {
       console.log(`API server running on port ${PORT}!`);
     });
   });
-  
-// Please, reference the README.md for further insight
-// Thank you for viewing!
-// Thomas Calle 😊
