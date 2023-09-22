@@ -1,11 +1,15 @@
-// Importing the mongoose library
-const mongoose = require('mongoose');
-// Connecting to the MongoDB database using the MongoDB URI provided in the environment 
-// variables or using the default URI if the environment variable is not set
-mongoose.connect(process.env.MONOGDB_URI || 'mongodb://localhost:27017/Nates-NoSQL',{
-    useNewUrlParser: true, 
-    useUnifiedTopology: true,
+// Importing necessary modules from mongoose
+const { connect, connection } = require('mongoose');
+
+// Define the MongoDB connection string
+const connectionString =
+  process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/natesnosqlDB';
+
+// Establishing the connection to MongoDB
+connect(connectionString, {
+  useNewUrlParser: true,        // Use the new URL parser
+  useUnifiedTopology: true,    // Use the new server discovery and monitoring engine
 });
 
-// Exporting the connection to the database as a module
-module.exports = mongoose.connection
+// Exporting the connection object for external use
+module.exports = connection;
