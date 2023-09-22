@@ -97,7 +97,10 @@ Each endpoint must include the necessary data in the request body or URL paramet
 
 ## Screenshots:
 ### Figure 1. Screenshot.
-![](/Public/assets/images/SS01.png) 
+![Terminal Install/Seed & poof of MongoDB connection](/Public/assets/images/SS001.png) 
+
+### Figure 2. Screenshot.
+![Insomnia CRUD API testing](/Public/assets/images/SS002.png)
 
 ## Installation Process:
 1. Clone the Repository from GitHub (or) Download Zip Folder from Repository from GitHub.
