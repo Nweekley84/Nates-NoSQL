@@ -1,23 +1,26 @@
-// Import the necessary dependencies and controllers
+// Importing the Express router
 const router = require('express').Router();
+
+// Importing specific functions from the userController
 const {
-  getAllUsers,
-  getUserById,
-  createUser,
-  updateUserById,
-  deleteUserById,
-  addFriend,
-  removeFriend,
-//   checkFriendRemoved,
-} = require('../../controllers/user-controller');
+  getUsers,          // Function to get all users
+  getSingleUser,     // Function to get a single user by ID
+  createUser,        // Function to create a new user
+  updateUser,        // Function to update a user by ID
+  deleteUser,        // Function to delete a user by ID
+  addFriend,         // Function to add a friend to a user's friend list
+  removeFriend       // Function to remove a friend from a user's friend list
+} = require('../../controllers/userController');
 
-// GET and POST all users
-router.route('/').get(getAllUsers).post(createUser);
+// Routes and corresponding controller functions
+// /api/users
+router.route('/').get(getUsers).post(createUser);
 
-// GET user id, PUT update user id and DELETE user by id
-router.route('/:userId').get(getUserById).put(updateUserById).delete(deleteUserById);
+// /api/users/:userId
+router.route('/:userId').get(getSingleUser).put(updateUser).delete(deleteUser);
 
-// POST add friend and DELETE remove Friend
+// /api/users/:userId/friends/:friendId
 router.route('/:userId/friends/:friendId').post(addFriend).delete(removeFriend);
-// Export the router
+
+// Exporting the configured router
 module.exports = router;
