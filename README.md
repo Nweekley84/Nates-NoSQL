@@ -101,7 +101,6 @@ Each endpoint must include the necessary data in the request body or URL paramet
 3. Open the integrated terminal of the document and complete the respective installation guides provided in "Built With" to ensure the cloned documentation will operate.
 
 ## Built With:
-- Saiyan Pride
 - JSON: [JSON](https://www.npmjs.com/package/json)
 - Dynamic JavaScript
 - Mongoose: [7.0.3](https://www.npmjs.com/package/mongoose)
