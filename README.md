@@ -1,10 +1,10 @@
-# Natess' NoSQL API "Poor Mans Facebook"
+# Natess' NoSQL API "Telepathy App"
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description.
 
-Nates' NoSQL API "Poor Mans Facebook" is a Node.js application programming interface (API) that allows users to perform CRUD operations on social networking data models using a NoSQL database. The data models include friends, users, thoughts, and reaction data models, and they can be retrieved by ID or all of them. This API is built using Node.js and Mongoose, and it provides a simple and scalable way to handle social networking data without the restrictions of traditional relational databases. We will use Insomnia to test out the parameters.
+Nates' NoSQL API "Telepathy App" is a Node.js application programming interface (API) that allows users to perform CRUD operations on social networking data models using a NoSQL database (No MySQL was harmed in the making of this). The data models include users, thoughts, and reaction data models, and they can be retrieved by ID or all of them. This API is built using Node.js and MongooseDB, and it provides a simple and scalable way to handle social networking data without the restrictions of traditional relational databases. Since this app will not be published, refer to my video recording below to show functionality.
 
 ## Table of Contents:
 - [Overview](#Overview)
@@ -89,7 +89,11 @@ Each endpoint must include the necessary data in the request body or URL paramet
 [GitHub Repository:](https://github.com/Nweekley84/Nates-NoSQL)
 
 ## YouTube Walkthrough Video:
-[Click Here to Watch](https://www.youtube.com/)
+### Figure 1. Installation and Seeding with MongoDB
+[YouTube Link #1](https://youtu.be/GlQpAgyvm-M)
+
+### Figure 2. Showing Insomnia CRUD API actions
+[YouTube Link #2](https://youtu.be/HZlzLuHLHsw)
 
 ## Screenshots:
 ### Figure 1. Screenshot.
