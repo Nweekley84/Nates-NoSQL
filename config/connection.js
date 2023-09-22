@@ -3,7 +3,7 @@ const { connect, connection } = require('mongoose');
 
 // Define the MongoDB connection string
 const connectionString =
-  process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/natesnosqlDB';
+  process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/telepathyDB';
 
 // Establishing the connection to MongoDB
 connect(connectionString, {
