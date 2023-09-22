@@ -89,7 +89,7 @@ Each endpoint must include the necessary data in the request body or URL paramet
 [GitHub Repository:](https://github.com/Nweekley84/Nates-NoSQL)
 
 ## YouTube Walkthrough Video:
-[Click Here to Watch](https://www.youtube.com/watch?v=TtLm6rTZ11I)
+[Click Here to Watch](https://www.youtube.com/)
 
 ## Screenshots:
 ### Figure 1. Screenshot.
@@ -134,7 +134,7 @@ Each endpoint must include the necessary data in the request body or URL paramet
   
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [Open Source Initiative Link](https://opensource.org/licenses/MIT)
 
-### Copyright © 2023 Thomas Calle
+### Copyright © 2023 Nathan Weekley
 ```md
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -157,8 +157,6 @@ SOFTWARE.
 
 ## Author
 
-Follow me on Github at [ThomasCalle](https://github.com/ThomasCalle)! Additional questions or concerns? feel free to contact me at thomas.calle@outlook.com.
+Follow me on Github at [Nathan Weekley](https://github.com/Nweekley84)! Additional questions or concerns? feel free to contact me at nweekley27@gmail.com.
 
-Until next, adios!
-
-© 2023 [ThomasCalle](https://github.com/ThomasCalle). Confidential and Proprietary. All Rights Reserved.
+© 2023 [Nathan Weekley](https://github.com/Nweekley84). Confidential and Proprietary. All Rights Reserved.
